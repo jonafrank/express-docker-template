@@ -1,0 +1,19 @@
+services:
+  app:
+    build: .
+    ports:
+      - 3000:3000
+    command: [ "yarn", "run", "start:dev" ]
+    volumes:
+      - ./:/srv/app
+      - /srv/app/node_modules
+    environment:
+      - NODE_ENV=development
+  apiDoc:
+    image: swaggerapi/swagger-ui
+    ports:
+      - 8081:8080
+    volumes:
+      - ./docs/openapi:/config
+    environment:
+      - SWAGGER_FILE=/config/openapi.yml

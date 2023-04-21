@@ -1,0 +1,12 @@
+openapi: 3.0.3
+info:
+  title: "JobberWocky API documentation"
+  termsOfService: http://swagger.io/terms/
+  version: 1.0.0
+  contact:
+    email: jonafrank@gmail.com
+servers:
+  - url: http://localhost:3000
+    description: Local Server for this API
+paths:
+# Start writing your Docs here
